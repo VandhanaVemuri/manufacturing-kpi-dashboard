@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Manufacturing KPI Dashboard</title>
+    <style>
+        body { font-family: Arial; margin: 40px; background-color: #f4f6f9; }
+        h1 { text-align: center; }
+        .kpi-container { display: flex; justify-content: space-around; margin-bottom: 40px; }
+        .kpi-box {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            width: 22%;
+            text-align: center;
+            box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+        }
+        .charts { margin-bottom: 50px; }
+    </style>
+</head>
+<body>
+
+<h1>Manufacturing Production KPI Dashboard</h1>
+
+<div class="kpi-container">
+    <div class="kpi-box">
+        <h3>Total Production</h3>
+        <p>{{ total_production }}</p>
+    </div>
+    <div class="kpi-box">
+        <h3>Defect Rate (%)</h3>
+        <p>{{ defect_rate }}</p>
+    </div>
+    <div class="kpi-box">
+        <h3>Total Downtime</h3>
+        <p>{{ total_downtime }}</p>
+    </div>
+    <div class="kpi-box">
+        <h3>Average Efficiency (%)</h3>
+        <p>{{ avg_efficiency }}</p>
+    </div>
+</div>
+
+<div class="charts">
+    {{ graph1|safe }}
+</div>
+
+<div class="charts">
+    {{ graph2|safe }}
+</div>
+
+<div class="charts">
+    {{ graph3|safe }}
+</div>
+
+<div class="charts">
+    {{ graph4|safe }}
+</div>
+
+</body>
+</html>
